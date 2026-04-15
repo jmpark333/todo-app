@@ -3,6 +3,68 @@
 @tailwind utilities;
 
 @layer base {
+  /* Theme CSS Custom Properties - applied via data-theme attribute */
+  :root,
+  [data-theme="default"] {
+    --color-primary: #7c3aed;
+    --color-secondary: #a855f7;
+    --color-accent: #ec4899;
+    --color-bg-gradient-from: #4c1d95;
+    --color-bg-gradient-via: #581c87;
+    --color-bg-gradient-to: #831843;
+    --color-surface: rgba(255, 255, 255, 0.95);
+    --color-text: #1f2937;
+    --color-text-muted: #6b7280;
+    --color-success: #10b981;
+    --color-danger: #ef4444;
+    --color-glow: rgba(139, 92, 246, 0.3);
+  }
+
+  [data-theme="dark"] {
+    --color-primary: #6366f1;
+    --color-secondary: #8b5cf6;
+    --color-accent: #c084fc;
+    --color-bg-gradient-from: #0f0f23;
+    --color-bg-gradient-via: #1a1a2e;
+    --color-bg-gradient-to: #16162a;
+    --color-surface: rgba(30, 30, 46, 0.95);
+    --color-text: #e5e5e5;
+    --color-text-muted: #9ca3af;
+    --color-success: #22c55e;
+    --color-danger: #f87171;
+    --color-glow: rgba(99, 102, 241, 0.3);
+  }
+
+  [data-theme="ocean"] {
+    --color-primary: #0891b2;
+    --color-secondary: #14b8a6;
+    --color-accent: #06b6d4;
+    --color-bg-gradient-from: #164e63;
+    --color-bg-gradient-via: #155e75;
+    --color-bg-gradient-to: #0e7490;
+    --color-surface: rgba(240, 253, 250, 0.95);
+    --color-text: #134e4a;
+    --color-text-muted: #5eead4;
+    --color-success: #10b981;
+    --color-danger: #f43f5e;
+    --color-glow: rgba(8, 145, 178, 0.3);
+  }
+
+  [data-theme="sunset"] {
+    --color-primary: #f97316;
+    --color-secondary: #fb923c;
+    --color-accent: #fbbf24;
+    --color-bg-gradient-from: #7c2d12;
+    --color-bg-gradient-via: #9a3412;
+    --color-bg-gradient-to: #c2410c;
+    --color-surface: rgba(255, 247, 237, 0.95);
+    --color-text: #431407;
+    --color-text-muted: #fb923c;
+    --color-success: #22c55e;
+    --color-danger: #dc2626;
+    --color-glow: rgba(249, 115, 22, 0.3);
+  }
+
   body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
