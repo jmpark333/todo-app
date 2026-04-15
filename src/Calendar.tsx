@@ -42,7 +42,7 @@ export default function Calendar({ selectedDate, onDateSelect, todosByDate }: Ca
       <div className="flex items-center justify-between mb-4">
         <button
           onClick={goToPreviousMonth}
-          className="p-2 hover:bg-violet-100 rounded-lg transition-colors text-gray-600 hover:text-violet-600"
+          className="p-2 hover:bg-[var(--color-primary)]/10 rounded-lg transition-colors text-gray-600 hover:text-[var(--color-primary)]"
         >
           <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -55,7 +55,7 @@ export default function Calendar({ selectedDate, onDateSelect, todosByDate }: Ca
         </div>
         <button
           onClick={goToNextMonth}
-          className="p-2 hover:bg-violet-100 rounded-lg transition-colors text-gray-600 hover:text-violet-600"
+          className="p-2 hover:bg-[var(--color-primary)]/10 rounded-lg transition-colors text-gray-600 hover:text-[var(--color-primary)]"
         >
           <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -66,7 +66,7 @@ export default function Calendar({ selectedDate, onDateSelect, todosByDate }: Ca
       {/* Today Button */}
       <button
         onClick={goToToday}
-        className="w-full mb-4 py-2 px-4 bg-violet-50 text-violet-600 rounded-lg text-sm font-medium hover:bg-violet-100 transition-colors"
+        className="w-full mb-4 py-2 px-4 bg-[var(--color-primary)]/10 text-[var(--color-primary)] rounded-lg text-sm font-medium hover:bg-[var(--color-primary)]/20 transition-colors"
       >
         오늘
       </button>
@@ -100,10 +100,10 @@ export default function Calendar({ selectedDate, onDateSelect, todosByDate }: Ca
                 transition-all duration-200
                 ${isCurrentMonth ? 'text-gray-800' : 'text-gray-300'}
                 ${isSelected
-                  ? 'bg-gradient-to-br from-violet-600 to-purple-600 text-white shadow-lg shadow-violet-500/30'
-                  : 'hover:bg-violet-50'
+                  ? 'bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-secondary)] text-white shadow-lg shadow-[var(--color-primary)]/30'
+                  : 'hover:bg-[var(--color-primary)]/10'
                 }
-                ${isCurrentDay && !isSelected ? 'border-2 border-violet-400' : ''}
+                ${isCurrentDay && !isSelected ? 'border-2 border-[var(--color-primary)]' : ''}
               `}
             >
               <span className="absolute inset-0 flex items-center justify-center">

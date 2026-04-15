@@ -2,6 +2,8 @@ import { useState, useMemo, useEffect, useRef } from 'react';
 import { format, isToday, isSameDay, isBefore, startOfDay } from 'date-fns';
 import { Todo, FilterType, ViewType } from './types';
 import Calendar from './Calendar';
+import { ThemeProvider } from './contexts/ThemeContext';
+import ThemeSelector from './components/ThemeSelector';
 
 const STORAGE_KEY = 'todo-app-todos';
 
@@ -223,7 +225,8 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-violet-900 via-purple-900 to-fuchsia-900">
+    <ThemeProvider>
+    <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-[var(--color-bg-gradient-from)] via-[var(--color-bg-gradient-via)] to-[var(--color-bg-gradient-to)]">
       {/* Animated Background */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-20 -left-20 w-96 h-96 bg-violet-500/30 rounded-full blur-3xl animate-float" />
@@ -333,6 +336,9 @@ export default function App() {
                 </div>
               </div>
             </div>
+
+            {/* Theme Selector */}
+            <ThemeSelector />
 
             {/* Export/Import */}
             <div className="bg-white/95 rounded-2xl p-4 shadow-xl">
@@ -523,6 +529,7 @@ export default function App() {
         </div>
       </div>
     </div>
+    </ThemeProvider>
   );
 }
 
